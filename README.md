@@ -1,14 +1,14 @@
-# leichttraktor-docker
+# leopard-docker
 leichttraktor-docker is php container.
 
-https://ja.wikipedia.org/wiki/ライヒトトラクトーア
+https://ja.wikipedia.org/wiki/VK_1602_レオパルト
 
 # Overall view
 ```
 .
-├── leichttraktor   <- https://github.com/kurohige113/leichttraktor.git
+├── leopard   <- https://github.com/kurohige113/leopard.git
 │   └── ...
-└── leichttraktor-docker   <- here
+└── leopard   <- here
     ├── README.md
     ├── docker-compose.yml
     └── php
@@ -28,7 +28,7 @@ docker-compose up -d
 docker exec -it web bash
 vim /etc/apache2/apache2.conf
 
-<Directory /var/www/leichttraktor>
+<Directory /var/www/leopard>
 	Options Indexes FollowSymLinks
 	AllowOverride None
 	Require all granted
@@ -41,16 +41,16 @@ docker exec -it web bash
 vim /etc/apache2/sites-available/000-default.conf
 
 <VirtualHost *:80>
-	DocumentRoot /var/www/leichttraktor
+	DocumentRoot /var/www/leopard
 </VirtualHost>
 ```
 
 4. make html
 ```
 docker exec -it web bash
-touch /var/www/leichttraktor/index.html
+touch /var/www/leopard/index.html
 ```
-or clone (https://github.com/kurohige113/leichttraktor.git)
+or clone (https://github.com/kurohige113/leopard.git)
 
 5. browse localhost
 
