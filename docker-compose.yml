@@ -1,11 +1,13 @@
 version: '3'
 
 services:
-  php:
-    build: ./php
+  web:
     container_name: web
-    volumes:
-      - ../leichttraktor:/var/www/leichttraktor
-      - ./php/php.ini:/usr/local/etc/php/php.ini
+    build: ./web
     ports:
       - 80:80
+    privileged: true
+    volumes:
+      - ../leopard:/var/www/leopard
+      - ./web/php.ini:/usr/local/etc/php/php.ini
+    
