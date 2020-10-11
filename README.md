@@ -1,5 +1,5 @@
 # leopard-docker
-leichttraktor-docker is php container.
+leopard-docker is php container.
 
 https://ja.wikipedia.org/wiki/VK_1602_レオパルト
 
@@ -8,7 +8,7 @@ https://ja.wikipedia.org/wiki/VK_1602_レオパルト
 .
 ├── leopard   <- https://github.com/kurohige113/leopard.git
 │   └── ...
-└── leopard   <- here
+└── leopard-docker   <- here
     ├── README.md
     ├── docker-compose.yml
     └── web
