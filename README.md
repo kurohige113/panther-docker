@@ -1,4 +1,4 @@
-# leopard-docker
+# panther-docker
 leopard-docker is php container with laravel.
 
 https://ja.wikipedia.org/wiki/VK_1602_レオパルト
@@ -6,9 +6,9 @@ https://ja.wikipedia.org/wiki/VK_1602_レオパルト
 # Overall view
 ```
 .
-├── leopard   <- https://github.com/kurohige113/leopard.git
+├── panther   <- https://github.com/kurohige113/panther.git
 │   └── ...
-└── leopard-docker   <- here
+└── panther-docker   <- here
     ├── README.md
     ├── docker-compose.yml
     └── web
@@ -26,7 +26,7 @@ docker-compose up -d
 2. make html
 ```
 docker exec -it web bash
-touch /var/www/leopard/public/index.html
+touch /var/www/panther/public/index.html
 ```
 or clone (https://github.com/kurohige113/leopard.git)
 
