@@ -58,3 +58,31 @@ mv * .[^\.]* ../
 cd ..
 rm -rf panther
 ```
+
+# db connection
+```
+# connection
+$ mysql -u root -p
+
+# create user
+create user 'hoge'@'localhost' identified by 'password';
+
+# change grant
+grant all privileges on panther_db.* to 'hoge'@'localhost';
+
+# change user password authentication method
+ALTER USER 'admin'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+
+# check user
+SELECT User, Host FROM mysql.user;
+```
+
+# laravel .env
+```
+DB_CONNECTION=mysql
+DB_HOST=db             // <- here
+DB_PORT=3306
+DB_DATABASE=panther_db // <- here
+DB_USERNAME=hoge       // <- here
+DB_PASSWORD=password   // <- here
+```
