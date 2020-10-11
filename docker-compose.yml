@@ -11,7 +11,7 @@ services:
       - 80:80
     privileged: true
     volumes:
-      - ../leopard:/var/www/leopard
+      - ../panther:/var/www/panther
       - ./web/php.ini:/usr/local/etc/php/php.ini
 
   db:
