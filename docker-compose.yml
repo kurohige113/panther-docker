@@ -1,5 +1,8 @@
 version: '3'
 
+volumes:
+  db-store:
+
 services:
   web:
     container_name: web
@@ -10,4 +13,11 @@ services:
     volumes:
       - ../leopard:/var/www/leopard
       - ./web/php.ini:/usr/local/etc/php/php.ini
-    
+
+  db:
+    container_name: db
+    build: ./db
+    ports:
+      - 3306:3306
+    volumes:
+      - db-store:/var/lib/mysql
