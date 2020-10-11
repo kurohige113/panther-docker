@@ -88,3 +88,10 @@ DB_DATABASE=panther_db // <- here
 DB_USERNAME=root       // <- here
 DB_PASSWORD=root       // <- here
 ```
+
+```
+$ docker exec -it web bash
+$ php artisan migrate 
+```
+
+OK
