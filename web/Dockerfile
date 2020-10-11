@@ -13,6 +13,7 @@ unzip \
 vim \
 && docker-php-ext-install zip
 RUN docker-php-ext-install pdo_mysql
+RUN docker-php-ext-install opcache
 
 # install composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
