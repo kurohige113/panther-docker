@@ -1,5 +1,5 @@
 # leopard-docker
-leopard-docker is php container.
+leopard-docker is php container with laravel.
 
 https://ja.wikipedia.org/wiki/VK_1602_レオパルト
 
