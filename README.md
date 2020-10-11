@@ -1,7 +1,7 @@
 # panther-docker
-leopard-docker is php container with laravel.
+panther-docker is php container with laravel.
 
-https://ja.wikipedia.org/wiki/VK_1602_レオパルト
+https://wikiwiki.jp/wotanks/Pz.Kpfw.%20V%20Panther
 
 # Overall view
 ```
@@ -11,9 +11,12 @@ https://ja.wikipedia.org/wiki/VK_1602_レオパルト
 └── panther-docker   <- here
     ├── README.md
     ├── docker-compose.yml
-    └── web
-        ├── Dockerfile
-        └── php.ini
+    ├── web
+    │   ├── Dockerfile
+    │   └── php.ini
+    └── db
+        ├── Dockerfile
+        └── my.cnf
 ```
 
 # How to start
@@ -28,7 +31,7 @@ docker-compose up -d
 docker exec -it web bash
 touch /var/www/panther/public/index.html
 ```
-or clone (https://github.com/kurohige113/leopard.git)
+or clone (https://github.com/kurohige113/panther.git)
 
 3. browse localhost
 
@@ -45,12 +48,13 @@ docker-compose down
 docker exec -it web bash
 
 # make laravel project
-laravel new leopard 
+# create laravel ver.6
+composer create-project "laravel/laravel=6.0.*" panther
 
-# /var/www/leopard/leopard -> /var/www/leopard
-# because document root is /var/www/leopard/public
-cd leopard
+# /var/www/panther/panther -> /var/www/panther
+# because document root is /var/www/panther/public
+cd panther
 mv * .[^\.]* ../
 cd ..
-rm -rf leopard
+rm -rf panther
 ```
