@@ -1,5 +1,5 @@
 # panther-docker
-panther-docker is php container with laravel.
+panther-docker is php container with laravel + mysql8.0
 
 https://wikiwiki.jp/wotanks/Pz.Kpfw.%20V%20Panther
 
